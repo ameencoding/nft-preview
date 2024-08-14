@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Soft-blue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+
+  --dark-blue: hsl(217, 54%, 11%);
+  --middle-blue: hsl(216, 50%, 16%);
+  --light-blue: hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--dark-blue);
+  font-family: "Outfit", sans-serif;
+}
+
+.container {
+  width: 300px;
+  border-radius: 8px;
+  background-color: var(--middle-blue);
+
+  padding: 1.2rem;
+}
+
+.cover {
+  cursor: pointer;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.cover .overlay {
+  background-color: rgba(0, 255, 247, 0.4);
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  height: 100%;
+  width: 100%;
+
+  transition: 0.2s all ease-in-out;
+}
+
+.overlay img {
+  height: 32px;
+}
+
+.cover > img {
+  width: 100%;
+  display: block;
+}
+
+.details {
+  margin-top: 1.3rem;
+  padding: 0 0.5rem;
+}
+
+.details strong {
+  color: var(--White);
+  cursor: pointer;
+}
+
+blockquote {
+  color: var(--Soft-blue);
+}
+
+div.info {
+  justify-content: space-between;
+}
+
+.info > div {
+  gap: 0.4rem;
+}
+
+.info > div .t-sm {
+  font-weight: 600;
+  color: var(--Cyan);
+}
+
+.info > p {
+  gap: 0.4rem;
+  color: var(--Soft-blue);
+}
+
+.line {
+  background-color: var(--light-blue);
+  height: 1px;
+}
+
+div.user {
+  justify-content: flex-start;
+  gap: 0.5rem;
+  color: var(--Soft-blue);
+}
+
+.user img {
+  height: 28px;
+  width: 28px;
+  border: 1.5px solid var(--Soft-blue);
+  border-radius: 50%;
+}
+
+div.user span {
+  color: var(--White);
+  cursor: pointer;
+  transition: 0.2s all ease-in-out;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.t-md {
+  font-size: 0.8rem;
+}
+
+.t-sm {
+  font-size: 0.65rem;
+}
+
+.mt {
+  margin-top: 1rem;
+}
+
+.hover:hover {
+  color: var(--Cyan);
+}
+
+.hide {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.cover:hover .overlay {
+  opacity: 100;
+  visibility: visible;
+  pointer-events: auto;
+}
